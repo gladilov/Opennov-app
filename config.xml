@@ -1,31 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "ru.opennov.app"
-        version   = "0.1">
-        
-  <name>Opennov app</name>
-  <description>News application from the site opennov.ru</description>
-  <author href="http://sapiens.media" email="a.gladilov@yandex.ru">Alex Gladilov</author>
-  <content src="index.html"/>
-  
-  <access origin="http://dev.opennov.ru" subdomains="true" />
-  <preference name="phonegap-version" value="cli-5.2.0" />
-  <gap:platform name="android" />
-  
-  <!--<preference name="StatusBarOverlaysWebView" value="false"/>
-  <preference name="permissions" value="none"/>
-  <preference name="fullscreen" value="true" />
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false" />
-  
-  <gap:plugin name="com.phonegap.plugin.statusbar" source="pgb" version="1.1.0" />
-  <gap:plugin name="org.apache.cordova.device" source="pgb" version="0.2.12" />
-  <gap:plugin name="org.apache.cordova.dialogs" source="pgb" version="0.2.10" />
-  <gap:plugin name="org.apache.cordova.inappbrowser" source="pgb" version="0.5.2" />
-  <gap:plugin name="org.apache.cordova.network-information" source="pgb" version="0.2.12" />
-  <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />-->
-  
-</widget>
+<?xml version="1.0" encoding="UTF-8"?>	<widget xmlns = "http://www.w3.org/ns/widgets"		xmlns:gap = "http://phonegap.com/ns/1.0"		id        = "ru.opennov.app"		versionCode=""		version   = "0.1">		<name>Opennov app</name>		<description>		</description>		<author href="" email="gladilov@sapiens-group.com">Alex Gl		</author>		<preference name="phonegap-version" value="cli-5.2.0" />		<preference name="orientation" value="default" />		<preference name="fullscreen" value="false" />		<preference name="target-device" value="universal" />		<preference name="webviewbounce" value="true" />		<preference name="prerendered-icon" value="true" />		<preference name="stay-in-webview" value="true" />		<preference name="ios-statusbarstyle" value="default" />		<preference name="detect-data-types" value="true" />		<preference name="exit-on-suspend" value="false" />		<preference name="show-splash-screen-spinner" value="true" />		<preference name="auto-hide-splash-screen" value="true" />		<preference name="EnableViewportScale" value="true" />		<preference name="MediaPlaybackRequiresUserAction" value="false" />		<preference name="AllowInlineMediaPlayback" value="false" />		<preference name="BackupWebStorage" value="cloud" />		<preference name="TopActivityIndicator" value="gray" />		<preference name="KeyboardDisplayRequiresUserAction" value="false" />		<preference name="HideKeyboardFormAccessoryBar" value="false" />		<preference name="SuppressesIncrementalRendering" value="false" />		<preference name="android-minSdkVersion" value="16" />		<preference name="android-installLocation" value="auto" />		<preference name="SplashScreenDelay" value="5000" />		<preference name="ErrorUrl" value=""/>		<preference name="BackgroundColor" value="0x000000"/>		<preference name="KeepRunning" value="true"/>		<preference name="DisallowOverscroll" value="true"/>		<preference name="LoadingDialog" value="Dialog title,"/> 		<preference name="LoadUrlTimeoutValue" value="20000" />		<preference name="disable-cursor" value="false" />		<gap:platform name="android" />		<feature name="http://api.phonegap.com/1.0/network"/>		<feature name="http://api.phonegap.com/1.0/notification"/>		<gap:plugin name="org.apache.cordova.device"  />		<gap:plugin name="org.apache.cordova.dialogs"  />		<gap:plugin name="org.apache.cordova.network-information"  />		<access origin="opennov.ru" subdomains="true"  />	</widget>
