@@ -9,6 +9,7 @@
     $.mobile.allowCrossDomainPages = true;
   });
 
+  
   var newsGet = function() {
     
   };
@@ -22,14 +23,21 @@
       $.ajax({
         url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
         type: 'get',
-        dataType: 'json',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-          console.log('page_node_pages - failed to retrieve pages');
           console.log(JSON.stringify(XMLHttpRequest));
           console.log(JSON.stringify(textStatus));
           console.log(JSON.stringify(errorThrown));
           alert(textStatus);
           alert(errorThrown);
+          
+          navigator.notification.alert(
+            'Ошибка ajax запроса..',
+            null,
+            'Ошибка',
+            'Ок'
+          );
         },
         success: function (data) {
           $("#news-list").html("");
