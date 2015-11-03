@@ -6,7 +6,7 @@
     });
     
     $.support.cors = true;
-    $.mobile.allowCrossDomainPages = true; 
+    $.mobile.allowCrossDomainPages = true;
   });
 
   var newsGet = function() {
@@ -43,5 +43,10 @@
     
     //news-list
   });
+  
+  document.addEventListener("deviceready", onDeviceReady, false);
+  function onDeviceReady() {
+    alert('deviceready');
+  }
 
 })(jQuery);

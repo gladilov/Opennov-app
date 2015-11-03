@@ -15,7 +15,7 @@
   <preference name="phonegap-version" value="cli-5.2.0" />
   <gap:platform name="android" />
   
-  <preference name="StatusBarOverlaysWebView" value="false"/>
+  <!--<preference name="StatusBarOverlaysWebView" value="false"/>
   <preference name="permissions" value="none"/>
   <preference name="fullscreen" value="true" />
   <preference name="webviewbounce" value="false"/>
@@ -26,6 +26,6 @@
   <gap:plugin name="org.apache.cordova.dialogs" source="pgb" version="0.2.10" />
   <gap:plugin name="org.apache.cordova.inappbrowser" source="pgb" version="0.5.2" />
   <gap:plugin name="org.apache.cordova.network-information" source="pgb" version="0.2.12" />
-  <!--<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />-->
+  <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />-->
   
 </widget>
