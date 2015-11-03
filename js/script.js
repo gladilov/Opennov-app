@@ -16,15 +16,13 @@
 
   $(document).on( "pagecontainershow", function( event, ui ) {
     var activePage = ui.toPage[0].id;
-    console.log(event);
-    console.log(ui);
     
     if (activePage == 'page-news') {
       $.ajax({
         url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
-        //type: 'get',
+        type: 'get',
         dataType: 'jsonp',
-        jsonp: 'jsoncallback',
+        //jsonp: 'jsoncallback',
         error: function (XMLHttpRequest, textStatus, errorThrown) {
           console.log(JSON.stringify(XMLHttpRequest));
           console.log(JSON.stringify(textStatus));
@@ -41,6 +39,14 @@
         },
         success: function (data) {
           $("#news-list").html("");
+          
+          navigator.notification.alert(
+            'Данные успешно загружены',
+            null,
+            'Title',
+            'Ок'
+          );
+          
           console.log(data);
           $.each(data,function (i,node) {
             console.log(JSON.stringify(node));
