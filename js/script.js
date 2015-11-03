@@ -22,7 +22,7 @@
     if (activePage == 'page-news') {
       $.ajax({
         url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
-        type: 'get',
+        //type: 'get',
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
         error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -32,12 +32,12 @@
           alert(textStatus);
           alert(errorThrown);
           
-          navigator.notification.alert(
+          /*navigator.notification.alert(
             'Ошибка ajax запроса..',
             null,
             'Ошибка',
             'Ок'
-          );
+          );*/
         },
         success: function (data) {
           $("#news-list").html("");
