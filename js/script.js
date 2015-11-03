@@ -22,7 +22,7 @@
         $.ajax({
           url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
           type: 'get',
-          dataType: 'json',
+          dataType: 'jsonp',
           error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.log('page_node_pages - failed to retrieve pages');
             console.log(JSON.stringify(XMLHttpRequest));
