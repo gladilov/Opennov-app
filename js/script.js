@@ -9,6 +9,11 @@
     $.mobile.allowCrossDomainPages = true;
     //$.mobile.pushStateEnabled = false;
   });
+  
+  $(document).on("deviceready", onDeviceReady, false);
+  function onDeviceReady() {
+    alert('deviceready');
+  }
 
   $(document).on( "pagecontainershow", function( event, ui ) {
     var activePage = ui.toPage[0].id;
