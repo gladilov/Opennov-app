@@ -28,6 +28,8 @@
           console.log(JSON.stringify(XMLHttpRequest));
           console.log(JSON.stringify(textStatus));
           console.log(JSON.stringify(errorThrown));
+          alert(textStatus);
+          alert(errorThrown);
         },
         success: function (data) {
           $("#news-list").html("");
@@ -44,9 +46,9 @@
     //news-list
   });
   
-  document.addEventListener("deviceready", onDeviceReady, false);
-  function onDeviceReady() {
-    alert('deviceready');
-  }
-
 })(jQuery);
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+  alert('deviceready');
+}
