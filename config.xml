@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "ru.opennov.app"
+        version   = "0.1">
+        
+  <name>Opennov app</name>
+  <description>News application from the site opennov.ru</description>
+  <author href="http://sapiens.media" email="a.gladilov@yandex.ru">Alex Gladilov</author>
+  <content src="index.html"/>
+  
+  <access origin="http://dev.opennov.ru" subdomains="true" />
+  <preference name="phonegap-version" value="cli-5.2.0" />
+  <gap:platform name="android" />
+  
+  <preference name="StatusBarOverlaysWebView" value="false"/>
+  <preference name="permissions" value="none"/>
+  <preference name="fullscreen" value="true" />
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false" />
+  
+  <gap:plugin name="com.phonegap.plugin.statusbar" source="pgb" version="1.1.0" />
+  <gap:plugin name="org.apache.cordova.device" source="pgb" version="0.2.12" />
+  <gap:plugin name="org.apache.cordova.dialogs" source="pgb" version="0.2.10" />
+  <gap:plugin name="org.apache.cordova.inappbrowser" source="pgb" version="0.5.2" />
+  <gap:plugin name="org.apache.cordova.network-information" source="pgb" version="0.2.12" />
+  <!--<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.5.0" />-->
+  
+</widget>
