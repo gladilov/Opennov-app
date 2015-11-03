@@ -40,12 +40,12 @@
         success: function (data) {
           $("#news-list").html("");
           
-          navigator.notification.alert(
+          /*navigator.notification.alert(
             'Данные успешно загружены',
             null,
             'Title',
             'Ок'
-          );
+          );*/
           
           console.log(data);
           $.each(data,function (i,node) {
