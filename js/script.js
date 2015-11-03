@@ -38,6 +38,8 @@
         url: "http://dev.opennov.ru/rest/views/news",
         type: 'get',
         dataType: 'json',
+        crossDomain: true,
+        timeout: 3000,
         //jsonp: 'jsoncallback',
         error: function (XMLHttpRequest, textStatus, errorThrown) {
           //console.log(JSON.stringify(XMLHttpRequest));
