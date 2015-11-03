@@ -7,8 +7,8 @@
     
     $.support.cors = true;
     $.mobile.allowCrossDomainPages = true;
+    $.mobile.pushStateEnabled = false;
   });
-
   
   var newsGet = function() {
     
@@ -18,15 +18,30 @@
     var activePage = ui.toPage[0].id;
     
     if (activePage == 'page-news') {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://dev.opennov.ru/rest/views/news?display_id=rest', true);
+      xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+      xhr.onload = function(){
+        console.log(JSON.parse(xhr.response));
+        
+        $("#news-list").html("");
+        $.each(JSON.parse(xhr.response),function (i,node) {
+          $("#news-list").append($("<li></li>",{"html":node.node_title}));
+        });
+        $("#news-list").listview("destroy").listview();
+
+      };
+      xhr.send();
+      
       $.ajax({
         url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
         type: 'get',
-        dataType: 'jsonp',
+        dataType: 'json',
         //jsonp: 'jsoncallback',
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-          console.log(JSON.stringify(XMLHttpRequest));
-          console.log(JSON.stringify(textStatus));
-          console.log(JSON.stringify(errorThrown));
+          //console.log(JSON.stringify(XMLHttpRequest));
+          //console.log(JSON.stringify(textStatus));
+          //console.log(JSON.stringify(errorThrown));
           alert(textStatus);
           alert(errorThrown);
           
@@ -38,21 +53,15 @@
           );*/
         },
         success: function (data) {
+          alert(data);
+          /*console.log(data);
+          
           $("#news-list").html("");
-          
-          /*navigator.notification.alert(
-            'Данные успешно загружены',
-            null,
-            'Title',
-            'Ок'
-          );*/
-          
-          console.log(data);
           $.each(data,function (i,node) {
-            console.log(JSON.stringify(node));
+            //console.log(JSON.stringify(node));
             $("#news-list").append($("<li></li>",{"html":node.node_title}));
           });
-          $("#news-list").listview("destroy").listview();
+          $("#news-list").listview("destroy").listview();*/
         }
       });
     }
