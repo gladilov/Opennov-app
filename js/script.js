@@ -34,7 +34,8 @@
       xhr.send();
       
       $.ajax({
-        url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
+        //url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
+        url: "http://dev.opennov.ru/rest/views/news",
         type: 'get',
         dataType: 'json',
         //jsonp: 'jsoncallback',
@@ -42,6 +43,7 @@
           //console.log(JSON.stringify(XMLHttpRequest));
           //console.log(JSON.stringify(textStatus));
           //console.log(JSON.stringify(errorThrown));
+          alert('error');
           alert(textStatus);
           alert(errorThrown);
           
@@ -53,6 +55,7 @@
           );*/
         },
         success: function (data) {
+          alert('ok');
           alert(data);
           /*console.log(data);
           

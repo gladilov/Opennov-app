@@ -1,1 +1,4 @@
 <access origin="*" />
+<access origin=".*"/>
+<access origin="http://opennov.ru" subdomains="true" />
+<access origin="http://dev.opennov.ru" subdomains="true" />
