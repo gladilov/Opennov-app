@@ -18,7 +18,7 @@
     var activePage = ui.toPage[0].id;
     
     if (activePage == 'page-news') {
-      var xhr = new XMLHttpRequest();
+      /*var xhr = new XMLHttpRequest();
       xhr.open('GET', 'http://dev.opennov.ru/rest/views/news?display_id=rest', true);
       xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
       xhr.onload = function(){
@@ -31,7 +31,7 @@
         $("#news-list").listview("destroy").listview();
 
       };
-      xhr.send();
+      xhr.send();*/
       
       $.ajax({
         //url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
@@ -58,15 +58,13 @@
         },
         success: function (data) {
           alert('ok');
-          alert(data);
-          /*console.log(data);
+          console.log(data);
           
           $("#news-list").html("");
           $.each(data,function (i,node) {
-            //console.log(JSON.stringify(node));
             $("#news-list").append($("<li></li>",{"html":node.node_title}));
           });
-          $("#news-list").listview("destroy").listview();*/
+          $("#news-list").listview("destroy").listview();
         }
       });
     }
@@ -76,7 +74,7 @@
   
 })(jQuery);
 
-document.addEventListener("deviceready", onDeviceReady, false);
+/*document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
   alert('deviceready');
-}
+}*/
