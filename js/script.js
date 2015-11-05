@@ -54,7 +54,7 @@
       });
     }
     
-    else if (activePage == 'page-evets') {
+    else if (activePage == 'page-events') {
       
       $.ajax({
         //url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
@@ -96,7 +96,9 @@
         //url: "http://dev.opennov.ru/rest/views/news?display_id=rest",
         url: "http://dev.opennov.ru/rest/node/300.json",
         type: 'get',
-        dataType: 'json',
+        dataType: 'jsonp',
+        crossDomain: true,
+        headers: {"Content-Type": "application/javascript;charset=UTF-8"},
         timeout: 3000,
         error: function (XMLHttpRequest, textStatus, errorThrown) {
           //console.log(JSON.stringify(XMLHttpRequest));
